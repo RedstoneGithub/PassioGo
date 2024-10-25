@@ -371,7 +371,7 @@ class TransportationSystem:
 			
 			vehicle = vehicle[0]
 			
-			for key in ["busId", "busName", "busType", "calculatedCourse", "routeId", "route", "color", "created", "latitude", "longitude", "speed", "paxLoad100", "outOfService", "more", "tripId"]:
+			for key in ["busId", "busName", "busType", "calculatedCourse", "routeId", "route", "color", "created", "latitude", "longitude", "speed", "paxLoad", "totalCap", "outOfService", "more", "tripId"]:
 				if key not in vehicle:
 					vehicle[key] = None
 			
@@ -389,7 +389,8 @@ class TransportationSystem:
 				latitude = vehicle["latitude"],
 				longitude = vehicle["longitude"],
 				speed = vehicle["speed"],
-				paxLoad = vehicle["paxLoad100"],
+				paxLoad = vehicle["paxLoad"],
+				totalCap = vehicle["totalCap"],
 				outOfService = vehicle["outOfService"],
 				more = vehicle["more"],
 				tripId = vehicle["tripId"],
@@ -670,6 +671,7 @@ class Vehicle:
 		longitude: float = None,
 		speed: float = None,
 		paxLoad: float = None,
+		totalCap: float = None,
 		outOfService: bool = None,
 		more: str = None,
 		tripId: str = None,
@@ -687,6 +689,7 @@ class Vehicle:
 		self.longitude = longitude
 		self.speed = speed
 		self.paxLoad = paxLoad
+		self.totalCap = totalCap
 		self.outOfService = outOfService
 		self.more = more
 		self.tripId = tripId
