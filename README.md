@@ -1,3 +1,9 @@
+Forked for use with Rutgers University busses, along with other systems.
+Changes:
+- Added proper longitude and latitude support for busses (fix latitude being unavailable, and longitude equaling latitude)
+- Added total capacity of busses
+- Fixed paxLoad returning None
+
 # Passio Go API
 
 [![PyPI - Version](https://img.shields.io/pypi/v/passiogo?label=Latest%20Version&link=https%3A%2F%2Fpypi.org%2Fproject%2FPassioGo%2F)](https://pypi.org/project/PassioGo/)
